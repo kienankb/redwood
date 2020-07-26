@@ -35,6 +35,11 @@ p {
     opacity: var(--text-opacity);
 }
 
+img {
+    width: 100%;
+    height: auto;
+}
+
 .redwood-body-column {
     max-width: 600px;
     margin-right: auto;
