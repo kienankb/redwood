@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{@site.lang}}">
+<head>
+    <title>{{meta_title}}</title>
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    {{ghost_head}}
+</head>
+<body class="{{body_class}}">
+    <p>Night mode: <input
+                        type="checkbox"
+                        id="night-checkbox"
+                        name="night-checkbox"
+                        onclick="toggleTheme(this.checked)">
+    </p>
+    <div class="redwood-body-column">
+        {{{body}}}
+    </div>
+    {{ghost_foot}}
+    <script type="text/javascript">
+        function toggleTheme(checked) {
+            let newTheme = checked ? 'night' : 'day';
+            setTheme(newTheme);
+        }
+
+        function setTheme(theme, fadeTheme=true) {
+            if (fadeTheme) {
+                document.body.style.transition = 'color .2s, background-color .2s';
+            }
+            document.body.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            document.getElementById('night-checkbox').checked = theme === 'night';
+        }
+
+        let onLoadTheme = localStorage.getItem('theme') || 'day'
+        setTheme(onLoadTheme, false);
+    </script>
+</body>
+</html>

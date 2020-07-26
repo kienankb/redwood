@@ -1,0 +1,15 @@
+{{!< default}}
+
+{{#post}}
+    {{#if primary_tag}}
+    <section class="post-full-tags">
+        {{#primary_tag}}
+        <div>filed under <a href="{{url}}">{{name}}</a></div>
+        {{/primary_tag}}
+    </section>
+    {{/if}}
+    <h1>{{title}}</h1>
+    <div class="redwood-post-content">
+        {{content}}
+    </div>
+{{/post}}
