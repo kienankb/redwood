@@ -3,6 +3,16 @@
     src: url('/assets/fonts/NunitoSans-Regular.ttf');
 }
 
+@font-face {
+    font-family: bitter;
+    src: url('/assets/fonts/Bitter-Regular.ttf');
+}
+
+@font-face {
+    font-family: hack;
+    src: url('/assets/fonts/Hack-Regular.ttf');
+}
+
 :root {
     --fg-color: black;
     --bg-color: white;
@@ -25,7 +35,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: nunito-sans;
+    font-family: bitter;
 }
 
 p {
@@ -36,6 +46,10 @@ p {
 img {
     width: 100%;
     height: auto;
+}
+
+pre {
+    font-family: hack;
 }
 
 .redwood-body-column {
