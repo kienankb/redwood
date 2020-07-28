@@ -52,6 +52,8 @@ img {
 
 pre {
     font-family: hack, monospace;
+    padding-left: 20px;
+    border-left: 3px solid gray;
 }
 
 .redwood-body-column {
