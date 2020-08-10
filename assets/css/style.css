@@ -30,6 +30,29 @@ body {
     background-color: var(--bg-color);
 }
 
+header {
+    display: flex;
+}
+
+header > ul {
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+header > ul > li {
+    display: inline-block;
+    list-style-type: none;
+}
+
+header > ul > li > a {
+    text-decoration: none;
+}
+
+#theme-toggle-container {
+    
+}
+
 a {
     color: unset;
 }

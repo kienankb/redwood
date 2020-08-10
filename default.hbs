@@ -6,12 +6,15 @@
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
-    <p>Night mode: <input
+    <header>
+        {{navigation}}
+        <div id="theme-toggle-container">Night mode: <input
                         type="checkbox"
                         id="night-checkbox"
                         name="night-checkbox"
                         onclick="toggleTheme(this.checked)">
-    </p>
+        </div>
+    </header>
     <div class="redwood-body-column">
         {{{body}}}
     </div>
