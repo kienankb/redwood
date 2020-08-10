@@ -4,7 +4,9 @@
     {{#if primary_tag}}
     <section class="post-full-tags">
         {{#primary_tag}}
-        <div>filed under <a href="{{url}}">{{name}}</a></div>
+            <p>
+                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MM.DD.YY"}}</time> in <a href="{{url}}">{{name}}</a>
+            </p>
         {{/primary_tag}}
     </section>
     {{/if}}

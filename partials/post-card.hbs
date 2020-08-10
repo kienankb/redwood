@@ -1,6 +1,9 @@
 <a class="redwood-post-card-link" href="{{url}}">
     <div class="redwood-post-card">
         <h1>{{title}}</h1>
+        <p>
+            <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="MM.DD.YY"}}</time>{{#if primary_tag}}{{#primary_tag}} in {{name}}{{/primary_tag}}{{/if}}
+        </p>
         <p>{{excerpt words="44"}}</p>
     </div>
 </a>
