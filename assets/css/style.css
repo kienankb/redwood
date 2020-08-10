@@ -32,6 +32,11 @@ body {
 
 header {
     display: flex;
+    position: fixed;
+    top: 0px;
+    border-bottom: 1px solid var(--fg-color);
+    background-color: var(--bg-color);
+    z-index: 1;
 }
 
 header > ul {
@@ -80,6 +85,7 @@ pre {
 }
 
 .redwood-body-column {
+    margin-top: 50px;
     max-width: 700px;
     margin-right: auto;
     margin-left: auto;
