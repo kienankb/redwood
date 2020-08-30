@@ -31,7 +31,17 @@ body {
 }
 
 header {
+    font-family: bitter, serif;
+    text-transform: lowercase;
+    font-size: 24px;
+    padding: 10px;
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-color);
+    z-index: 1;
     border-bottom: 1px solid var(--fg-color);
 }
 
@@ -48,6 +58,13 @@ header > ul > li {
 
 header > ul > li > a {
     text-decoration: none;
+}
+
+#redwood-site-title {
+    padding-right: 10px;
+    margin-right: 10px;
+    font-weight: 800;
+    border-right: 1px solid var(--fg-color);
 }
 
 #theme-toggle-container {
