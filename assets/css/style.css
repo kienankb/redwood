@@ -58,6 +58,11 @@ header > ul > li {
 
 header > ul > li > a {
     text-decoration: none;
+    padding-right: 5px;
+}
+
+header > ul > li > a:hover {
+    text-decoration: underline;
 }
 
 #redwood-site-title {
