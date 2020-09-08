@@ -2,36 +2,32 @@
 <html lang="{{@site.lang}}">
 <head>
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/style.css"}}">
+    <link href="{{asset "css/solid.min.css"}} type="text/css" rel="stylesheet">
+    <link href="{{asset "css/fontawesome.min.css"}} type="text/css" rel="stylesheet">
     {{ghost_head}}
 </head>
 <body class="{{body_class}}">
     <header>
         <span id="redwood-site-title">{{@site.title}}</span>{{navigation}}
-        <div id="theme-toggle-container">Night mode: <input
-                        type="checkbox"
-                        id="night-checkbox"
-                        name="night-checkbox"
-                        onclick="toggleTheme(this.checked)">
-        </div>
+        <div id="theme-toggle-icon"></div>
     </header>
     <div class="redwood-body-column">
         {{{body}}}
     </div>
     {{ghost_foot}}
     <script type="text/javascript">
-        function toggleTheme(checked) {
-            let newTheme = checked ? 'night' : 'day';
-            setTheme(newTheme);
-        }
-
         function setTheme(theme, fadeTheme=true) {
             if (fadeTheme) {
                 document.body.style.transition = 'color .2s, background-color .2s';
             }
             document.body.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
-            document.getElementById('night-checkbox').checked = theme === 'night';
+            if (theme === 'night') {
+                document.getElementById('theme-toggle-icon').innerHTML = "<i onclick=\"setTheme('day')\" class='fas fa-sun'></i>";
+            } else {
+                document.getElementById('theme-toggle-icon').innerHTML = "<i onclick=\"setTheme('night')\" class='fas fa-moon'></i>";
+            }
         }
 
         let onLoadTheme = localStorage.getItem('theme') || 'day'

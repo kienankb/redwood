@@ -76,6 +76,10 @@ header > ul > li > a:hover {
     
 }
 
+#theme-toggle-icon {
+    cursor: pointer;
+}
+
 a {
     color: unset;
 }
