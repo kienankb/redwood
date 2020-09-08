@@ -1,5 +1,10 @@
 {{!< default}}
 <div>
+    {{#is "tag"}}
+        <h1>
+            <i class="fas fa-tag"></i> {{tag.name}}
+        </h1>
+    {{/is}}
     {{#foreach posts}}
         {{> post-card}}
     {{/foreach}}
