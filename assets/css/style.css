@@ -78,6 +78,11 @@ header > ul > li > a:hover {
 
 #theme-toggle-icon {
     cursor: pointer;
+    transition: transform .1s ease-out;
+}
+
+#theme-toggle-icon:hover {
+    transform: scale(1.3);
 }
 
 a {
